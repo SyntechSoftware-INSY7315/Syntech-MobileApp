@@ -1,0 +1,42 @@
+name: Android Build
+
+on:
+  push:
+    branches:
+      - develop
+      - "feature/**"
+      - "bugfix/**"
+
+  pull_request:
+    branches:
+      - develop
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Make Gradle Executable
+        run: chmod +x gradlew
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+
+    # Uncomment this part once unit tests are complete
+    #
+    # - name: Run Unit Tests
+    #   run: ./gradlew test
