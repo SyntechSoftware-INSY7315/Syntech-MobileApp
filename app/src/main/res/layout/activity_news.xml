@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/syntech_background">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="14dp"
+        android:background="@color/syntech_dark">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/syntech_logo"
+            android:contentDescription="Syntech Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Syntech Software"
+            android:textColor="@color/syntech_white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latest News"
+                android:textColor="@color/syntech_text"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- SEARCH -->
+
+            <EditText
+                android:id="@+id/newsSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:hint="🔍  Search articles..."
+                android:padding="12dp"
+                android:backgroundTint="@color/syntech_blue"
+                android:textSize="13sp" />
+
+
+            <!-- NEWS 1 -->
+
+            <LinearLayout
+                android:id="@+id/newsCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@color/syntech_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/news_1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="News article image" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Syntech Software Partners with NalieTech"
+                    android:textColor="@color/syntech_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Date: 2025/10/05"
+                    android:textColor="@color/syntech_gray"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/readNews1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end"
+                    android:text="Read"
+                    android:textAllCaps="false"
+                    android:textColor="@color/syntech_white"
+                    android:backgroundTint="@color/syntech_blue" />
+
+            </LinearLayout>
+
+
+            <!-- NEWS 2 -->
+
+            <LinearLayout
+                android:id="@+id/newsCard2"
+                android:layout_width="match_parent"
+                android:layout_height="568dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/syntech_light_blue"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="183dp"
+                    android:contentDescription="News article image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/news_2" />
+
+                <TextView
+                    android:layout_width="416dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="What's New at Syntech?"
+                    android:textColor="@color/syntech_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Discover the latest updates, projects and technology developments."
+                    android:textColor="@color/syntech_gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/readNews2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/syntech_blue_dark"
+                    android:text="Read"
+                    android:textAllCaps="false"
+                    android:textColor="@color/syntech_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/navigation_bar" />
+
+</LinearLayout>

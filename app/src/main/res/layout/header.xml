@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:elevation="4dp">
+
+    <!-- Syntech logo placeholder -->
+    <TextView
+        android:id="@+id/txtLogo"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:text="S"
+        android:textColor="@color/syntech_blue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Company name -->
+    <TextView
+        android:id="@+id/txtCompanyName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Syntech Software"
+        android:textColor="@color/dark_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="6dp" />
+
+    <!-- Menu -->
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        android:contentDescription="Menu" />
+
+</LinearLayout>

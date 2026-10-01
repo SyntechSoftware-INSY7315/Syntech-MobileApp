@@ -1,19 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/syntech_background"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- HEADER -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/syntech_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:contentDescription="Syntech Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/syntech_logo" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Syntech Software"
+            android:textColor="@color/syntech_white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menuButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="☰"
+            android:textColor="@color/syntech_white"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+
+    <!-- PAGE -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- HERO CARD -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/syntech_light_blue"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Innovative\nSoftware Solutions"
+                    android:textAlignment="center"
+                    android:textColor="@color/syntech_text"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Your technology partner for the long haul. We deliver high-performance solutions from full-stack development to Industrial IoT and Robotic Process Automation."
+                    android:textAlignment="center"
+                    android:textColor="@color/syntech_gray"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/exploreServicesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/syntech_blue"
+                    android:text="Explore Services"
+                    android:textAllCaps="false"
+                    android:textColor="@color/syntech_white" />
+
+                <Button
+                    android:id="@+id/startProjectButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/syntech_blue_dark"
+                    android:text="Start Your Project"
+                    android:textAllCaps="false"
+                    android:textColor="@color/syntech_white" />
+
+            </LinearLayout>
+
+
+            <!-- HOME IMAGE -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="Developer illustration"
+                android:scaleType="centerInside"
+                android:src="@drawable/developer_1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/syntech_dark"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/navHome"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/syntech_dark"
+            android:text="⌂\nHome"
+            android:textColor="@color/syntech_blue"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/navServices"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/syntech_dark"
+            android:text="⚙\nServices"
+            android:textColor="@color/syntech_white"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/navPortfolio"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/syntech_dark"
+            android:text="▣\nPortfolio"
+            android:textColor="@color/syntech_white"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/navNews"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/syntech_dark"
+            android:text="▤\nNews"
+            android:textColor="@color/syntech_white"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/navContact"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/syntech_dark"
+            android:text="☎\nContact"
+            android:textColor="@color/syntech_white"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--
+    REFERENCES:
+    Android Developers (2025) Layouts and views.
+    Available at: https://developer.android.com/develop/ui/views/layout/declaring-layout
+    (Accessed: 29 September 2026).
+
+    Android Developers (2025) ImageView.
+    Available at: https://developer.android.com/reference/android/widget/ImageView
+    (Accessed: 29 September 2026).
+    -->
