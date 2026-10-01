@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="68dp"
+    android:background="@color/syntech_dark"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/navHome"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/syntech_dark"
+        android:text="⌂\nHome"
+        android:textColor="@color/syntech_white"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/navServices"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/syntech_dark"
+        android:text="⚙\nServices"
+        android:textColor="@color/syntech_blue"
+        android:textSize="9sp" />
+
+    <Button
+        android:id="@+id/navPortfolio"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/syntech_dark"
+        android:text="▣\nPortfolio"
+        android:textColor="@color/syntech_white"
+        android:textSize="9sp" />
+
+    <Button
+        android:id="@+id/navNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/syntech_dark"
+        android:text="▤\nNews"
+        android:textColor="@color/syntech_white"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/navContact"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/syntech_dark"
+        android:text="☎\nContact"
+        android:textColor="@color/syntech_white"
+        android:textSize="10sp" />
+
+</LinearLayout>

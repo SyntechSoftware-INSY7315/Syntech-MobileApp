@@ -1,20 +1,181 @@
 package za.co.syntechsoftwareptyltd.syntechsoftwaremobileapplication
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
+        showHome()
+    }
+
+
+    // ==========================================
+    // HOME
+    // ==========================================
+
+    private fun showHome() {
+
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val exploreServicesButton =
+            findViewById<Button>(R.id.exploreServicesButton)
+
+        val startProjectButton =
+            findViewById<Button>(R.id.startProjectButton)
+
+        exploreServicesButton.setOnClickListener {
+            showServices()
+        }
+
+        startProjectButton.setOnClickListener {
+            showContact()
+        }
+
+        setupNavigation()
+    }
+
+
+    // ==========================================
+    // SERVICES
+    // ==========================================
+
+    private fun showServices() {
+
+        setContentView(R.layout.activity_services)
+
+        setupNavigation()
+    }
+
+
+    // ==========================================
+    // PORTFOLIO
+    // ==========================================
+
+    private fun showPortfolio() {
+
+        setContentView(R.layout.activity_portfolio)
+
+        val visitWebsiteButton =
+            findViewById<Button>(R.id.visitWebsiteButton)
+
+        visitWebsiteButton.setOnClickListener {
+
+            Toast.makeText(
+                this,
+                "Portfolio website coming soon",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        setupNavigation()
+    }
+
+
+    // ==========================================
+    // NEWS
+    // ==========================================
+
+    private fun showNews() {
+
+        setContentView(R.layout.activity_news)
+
+        val readNews1 =
+            findViewById<Button>(R.id.readNews1)
+
+        val readNews2 =
+            findViewById<Button>(R.id.readNews2)
+
+        readNews1.setOnClickListener {
+
+            Toast.makeText(
+                this,
+                "Opening article...",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        readNews2.setOnClickListener {
+
+            Toast.makeText(
+                this,
+                "Opening article...",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        setupNavigation()
+    }
+
+
+    // ==========================================
+    // CONTACT
+    // ==========================================
+
+    private fun showContact() {
+
+        setContentView(R.layout.activity_contact)
+
+        val sendMessageButton =
+            findViewById<Button>(R.id.sendMessageButton)
+
+        sendMessageButton.setOnClickListener {
+
+            Toast.makeText(
+                this,
+                "Thank you! Your message has been received.",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        setupNavigation()
+    }
+
+
+    // ==========================================
+    // BOTTOM NAVIGATION
+    // ==========================================
+
+    private fun setupNavigation() {
+
+        val home =
+            findViewById<Button>(R.id.navHome)
+
+        val services =
+            findViewById<Button>(R.id.navServices)
+
+        val portfolio =
+            findViewById<Button>(R.id.navPortfolio)
+
+        val news =
+            findViewById<Button>(R.id.navNews)
+
+        val contact =
+            findViewById<Button>(R.id.navContact)
+
+
+        home.setOnClickListener {
+            showHome()
+        }
+
+        services.setOnClickListener {
+            showServices()
+        }
+
+        portfolio.setOnClickListener {
+            showPortfolio()
+        }
+
+        news.setOnClickListener {
+            showNews()
+        }
+
+        contact.setOnClickListener {
+            showContact()
         }
     }
 }

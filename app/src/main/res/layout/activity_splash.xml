@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/syntech_background">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:src="@drawable/syntech_logo"
+        android:scaleType="fitCenter"
+        android:contentDescription="Syntech Software Logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="SYNTECH"
+        android:textColor="@color/syntech_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOFTWARE"
+        android:textColor="@color/syntech_dark"
+        android:textSize="13sp"
+        android:letterSpacing="0.25" />
+
+    <ProgressBar
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
+        android:indeterminateTint="@color/syntech_blue" />
+
+</LinearLayout>

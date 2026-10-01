@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Syntech colours -->
+    <color name="syntech_blue">#008FE5</color>
+    <color name="syntech_dark">#172333</color>
+    <color name="syntech_blue_dark">#006FB5</color>
+    <color name="syntech_background">#F3F8FC</color>
+    <color name="syntech_white">#FFFFFF</color>
+    <color name="syntech_text">#172333</color>
+    <color name="syntech_gray">#667085</color>
+    <color name="syntech_light_blue">#E4F3FD</color>
+    <color name="syntech_extra_light">#F0F8FF</color>
+    <color name="syntech_border">#D5E7F3</color>
+
+    <!-- Colours required by existing files -->
+    <color name="white">#FFFFFF</color>
+    <color name="light_grey">#E5E7EB</color>
+    <color name="syntech_dark_blue">#172333</color>
+    <color name="dark_text">#172333</color>
+
 </resources>
