@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -140,23 +141,14 @@ class MainActivity : AppCompatActivity() {
     // BOTTOM NAVIGATION
     // ==========================================
 
+
     private fun setupNavigation() {
 
-        val home =
-            findViewById<Button>(R.id.navHome)
-
-        val services =
-            findViewById<Button>(R.id.navServices)
-
-        val portfolio =
-            findViewById<Button>(R.id.navPortfolio)
-
-        val news =
-            findViewById<Button>(R.id.navNews)
-
-        val contact =
-            findViewById<Button>(R.id.navContact)
-
+        val home = findViewById<View>(R.id.navHome)
+        val services = findViewById<View>(R.id.navServices)
+        val portfolio = findViewById<View>(R.id.navPortfolio)
+        val news = findViewById<View>(R.id.navNews)
+        val contact = findViewById<View>(R.id.navContact)
 
         home.setOnClickListener {
             showHome()
@@ -178,4 +170,5 @@ class MainActivity : AppCompatActivity() {
             showContact()
         }
     }
+
 }

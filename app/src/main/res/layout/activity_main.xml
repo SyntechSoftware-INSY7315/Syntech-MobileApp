@@ -34,14 +34,6 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/menuButton"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:gravity="center"
-            android:text="☰"
-            android:textColor="@color/syntech_white"
-            android:textSize="22sp" />
 
     </LinearLayout>
 
@@ -128,65 +120,151 @@
 
     <!-- BOTTOM NAVIGATION -->
 
+
+    <!-- BOTTOM NAVIGATION -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="72dp"
         android:background="@color/syntech_dark"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <!-- HOME -->
+        <LinearLayout
             android:id="@+id/navHome"
-            android:layout_width="88dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/syntech_dark"
-            android:text="⌂\nHome"
-            android:textColor="@color/syntech_blue"
-            android:textSize="10sp" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌂"
+                android:textColor="@color/syntech_blue"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/syntech_blue"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- SERVICES -->
+        <LinearLayout
             android:id="@+id/navServices"
-            android:layout_width="95dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/syntech_dark"
-            android:text="⚙\nServices"
-            android:textColor="@color/syntech_white"
-            android:textSize="9sp" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙"
+                android:textColor="@color/syntech_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:textColor="@color/syntech_white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- PORTFOLIO -->
+        <LinearLayout
             android:id="@+id/navPortfolio"
-            android:layout_width="94dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/syntech_dark"
-            android:text="▣\nPortfolio"
-            android:textColor="@color/syntech_white"
-            android:textSize="9sp" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▣"
+                android:textColor="@color/syntech_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Portfolio"
+                android:textColor="@color/syntech_white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- NEWS -->
+        <LinearLayout
             android:id="@+id/navNews"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/syntech_dark"
-            android:text="▤\nNews"
-            android:textColor="@color/syntech_white"
-            android:textSize="10sp" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▤"
+                android:textColor="@color/syntech_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News"
+                android:textColor="@color/syntech_white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- CONTACT -->
+        <LinearLayout
             android:id="@+id/navContact"
-            android:layout_width="96dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/syntech_dark"
-            android:text="☎\nContact"
-            android:textColor="@color/syntech_white"
-            android:textSize="10sp" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☎"
+                android:textColor="@color/syntech_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="@color/syntech_white"
+                android:textSize="11sp" />
+        </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
 
     <!--
